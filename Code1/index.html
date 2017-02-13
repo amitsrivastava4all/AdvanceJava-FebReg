@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn JS</title>
+    <script src="p5.min.js"></script>
+    <script>
+    var balls =[];    
+    var randomNo  = 30;    
+        // Function Constructor
+    function Ball(x,y){
+        this.x  = x;
+        this.y = y;
+        this.width = 55;
+        this.height = 55;
+        this.speedX = 5;
+        this.speedY = 5;
+    }    
+        
+    //var x =30; 
+    //var y = 100;    
+    //var speed = 5;
+    //var speedY = 5;  
+        
+    function prepareBalls(){
+        for(var i =1 ; i<=50; i++){
+        var ball = new Ball(random(500),random(500));
+        balls.push(ball);
+    }
+    }    
+    function setup(){
+        createCanvas(500,500);
+        prepareBalls();
+        //console.log("Setup Will Call Only Once....");
+    }
+        
+    function changeDirection(ball,randomNo){
+            ball.x = ball.x + ball.speedX;
+        ball.y= ball.y + ball.speedY;
+        if(ball.y<=0){
+           ball.speedY = random(randomNo); 
+        }
+        if(ball.y>=500){
+            ball.speedY = -1;
+        }
+        if(ball.x<=0){
+            ball.speedX = random(randomNo);
+        }
+        if(ball.x>=500){
+            ball.speedX = -5;
+        }
+     
+    }    
+    function draw(){
+        background('cyan');
+        fill('red');
+        //
+        for(var i = 0; i<balls.length; i++){
+            ellipse(balls[i].x, balls[i].y, balls[i].width, balls[i].height);
+            changeDirection(balls[i], random(randomNo));
+        }
+       //rect(mouseX, mouseY, 85, 55);
+        //console.log("Draw Will Call Again and Again...");
+    }    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
