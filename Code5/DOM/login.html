@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="css/design.css">
+	<script src="js/login.js"></script>
+</head>
+<body>
+	<h1>Login Page</h1>
+	<table>
+		<tr>
+			<td><label for="">Userid:</label></td>
+			<td><input class="clear" type="text" id="userid" placeholder="Type Userid Here">
+			<span id="useriderror" class="error"></span>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="">Password:</label></td>
+			<td><input class="clear" type="password" placeholder="Type Password here" id="pwd">
+			<span id="pwderror" class="error"></span>
+			</td>
+		</tr>
+		<tr>
+			<td><button onclick="isAuth()">Login</button></td>
+			<td><button onclick="clearFields()">Reset</button></td>
+		</tr>
+	</table>
+	<h1 id="msg"></h1>
+</body>
+</html>
