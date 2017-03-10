@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mic</title>
+	<script src="p5.min.js"></script>
+	<script src="p5.sound.min.js"></script>
+	<script>
+		var mic ;
+	function setup(){
+		createCanvas(500,500);
+		mic = new p5.AudioIn();
+		mic.start();
+	}
+		function draw(){
+			background('black');
+			fill('yellow');
+			ellipse(200,200,300*mic.getLevel(),300*mic.getLevel())
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
