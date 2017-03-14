@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Item CRUD</title>
+	<script src="js/models/item.js"></script>
+	<script src="js/models/itemoperation.js"></script>
+	<script src="js/controllers/itemcontroller.js"></script>
+</head>
+<body>
+	<h1>Item CRUD</h1>
+	<fieldset>
+		<legend>Item - CRUD Operations</legend>
+		<table>
+			<tr>
+				<td><label for="">Item No</label></td>
+				<td><label id="itemno">1</label></td>
+			</tr>
+			<tr>
+				<td><label for="">Name</label>
+				<td><input type="text" id="itemname" placeholder="Type Item No "></td>
+				
+			</tr>
+			<tr>
+				<td><label for="">Desc</label>
+				<td><textarea placeholder="Type Desc Here" id="desc" cols="30" rows="6"></textarea>
+				
+			</tr>
+			<tr>
+				<td><label for="">Price</label></td>
+				<td>
+				<input type="text" id="price" placeholder="Type Price Here">
+				</td>
+				
+			</tr>
+			<tr>
+				<td><label for="">URL</label></td>
+				<td><input placeholder="Type URL Here" type="url" id="url"></td>
+				
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table>
+						<tr>
+							<td><button id="addBt">Add</button></td>
+							<td><button>Delete</button></td>
+							<td><button>Search</button></td>
+							<td><button>Update</button></td>
+							<td><button>Save</button></td>
+							<td><button>Load</button></td>
+							<td><button>Sort</button></td>
+							<td><button>Save to Server</button></td>
+							<td><button>Clear All</button></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	<fieldset>
+		<legend>Item List</legend>
+		<table border="1">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Desc</th>
+				<th>Price</th>
+				<th>Image</th>
+				<th>Operations</th>
+			</tr>
+		</thead>
+		<tbody id="itemTableBody">
+			
+		</tbody>	
+		</table>
+	</fieldset>
+</body>
+</html>
