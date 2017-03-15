@@ -1,0 +1,90 @@
+var arr = [10,20,30,40,50];
+undefined
+arr.forEach(function(x){
+console.log(x);
+});
+VM115:2 10
+VM115:2 20
+VM115:2 30
+VM115:2 40
+VM115:2 50
+undefined
+var subArray = arr.filter(function(x){
+return x>20;
+});
+undefined
+subArray;
+[30, 40, 50]
+arr.sort(function(x,y){
+return x-y;
+});
+[10, 20, 30, 40, 50]
+arr.sort(function(x,y){
+return y-x;
+});
+[50, 40, 30, 20, 10]
+arr = [90,100,20,77,1];
+[90, 100, 20, 77, 1]
+arr.sort(function(x,y){
+return y-x;
+});
+[100, 90, 77, 20, 1]
+arr = [100,90,20,77,1];
+[100, 90, 20, 77, 1]
+arr.sort(function(x,y){
+return y-x;
+});
+[100, 90, 77, 20, 1]
+"amit".localeCompare("anil");
+-1
+"amit".localeCompare("raj");
+-1
+arr.sort(function(x,y){
+console.log(x+" " +y);
+return y-x;
+});
+VM443:2 100 90
+VM443:2 90 77
+VM443:2 77 20
+VM443:2 20 1
+[100, 90, 77, 20, 1]
+arr.sort(function(x,y){
+console.log(x+" " +y+" "+(y-x));
+return y-x;
+});
+VM460:2 100 90 -10
+VM460:2 90 77 -13
+VM460:2 77 20 -57
+VM460:2 20 1 -19
+[100, 90, 77, 20, 1]
+var names=["ram","shyam","anil"];
+undefined
+var names=["ram","shyam","anil","amit","Amit"];
+undefined
+names.sort(function(a,b){
+return a.localCompare(b);
+});
+VM587:2 Uncaught TypeError: a.localCompare is not a function
+    at <anonymous>:2:10
+    at Array.sort (native)
+    at <anonymous>:1:7
+(anonymous) @ VM587:2
+(anonymous) @ VM587:1
+names.sort(function(a,b){
+return a.localeCompare(b);
+});
+["amit", "Amit", "anil", "ram", "shyam"]
+names.sort(function(a,b){
+return b.localeCompare(a);
+});
+["shyam", "ram", "anil", "Amit", "amit"]
+var names=["ram","shyam","anil","amit","Amit","Tom"];
+undefined
+names.sort(function(a,b){
+return b.localeCompare(a);
+});
+["Tom", "shyam", "ram", "anil", "Amit", "amit"]
+names.sort(function(a,b){
+return a.localeCompare(b);
+});
+["amit", "Amit", "anil", "ram", "shyam", "Tom"]
